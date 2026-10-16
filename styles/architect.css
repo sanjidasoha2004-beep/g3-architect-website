@@ -113,7 +113,9 @@ main>section{
 /* features section related style */
 
 .features{
+  
   gap: 140px;
+  
 }
   #features-section-title{
     border-left: 5px solid #FF900E;
@@ -122,12 +124,13 @@ main>section{
   }
   .feature-card{
     padding: 30px;
+     margin-bottom: 20px;
     border-radius: 8px;
      box-shadow: 0 4px 30px 0 rgba(0,0,0,0.06);
-     margin-bottom: 20px;
+    
      
   }
-  .feature-card .feature-title{
+  .feature-card .features-title{
      font-weight: 600;
      font-size: 1.2rem;
      margin-top: 0px;
@@ -135,16 +138,36 @@ main>section{
      
   }
 
+  #experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+     }
+  #experience-year{
+  font-size: 4rem;
+  font-weight:700 ;
+  display: block;
+  }
 
+  .features-architect img{
+    width: 100%;
+
+  }
  .facts-container{
   display: grid;
   grid-template-columns:repeat(4,1fr);
+  gap: 20px;
 
  }
  .fact-card{
-  border: 1px solid #FF900E;
-  width: 240px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 240px;
   height: 240px;
+  display: flex;
+  border: 1px solid #FF900E;
   border-radius: 8px;
   text-align: center;
   align-items: center;
@@ -172,15 +195,16 @@ main>section{
 @media screen and (max-width: 576px) {
   .navbar , 
   .nav-links,
+  .features,
   .teams
   {
     flex-direction: column;
   }
 
-  .team-img-container, .facts-container, .sponsors-conapies{
+  .team-img-container, .facts-container, .sponsors-companies{
     grid-template-columns: 1fr;
   }
-  .facts-container, .sponsors-conapies{
+  .facts-container, .sponsors-companies{
        justify-items: center;
         gap: 24px;
 
@@ -188,7 +212,9 @@ main>section{
 
 .our-features{
   margin-left: 20;
+  padding-left: 0;
 }
+
 }
 /* sponsors related style */
 .sponsors-info{
@@ -197,26 +223,34 @@ main>section{
   text-align: center;
 }
 
- .sponsors-conapies{
+ .sponsors-companies{
    display: grid;
    grid-template-columns: repeat(5,1fr);
    gap: 24;
 
  }
 
- .sponsors-conapies{
+   .sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 24px;
   filter: grayscale(100%);
  }
 @media screen and (min-width:576px)and (max-width:992px){
-  .teams{
+  .teams, .features{
     flex-direction: column;
   }
   .our-features{
     margin: 20px auto;
   }
-    .sponsors-conapies, .facts-container{
+    .sponsors-companies, .facts-container{
       grid-template-columns: repeat(3,1fr);
       gap: 50px;
       justify-items: center;
     }
+    #experience-badge{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    
 }
